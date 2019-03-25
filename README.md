@@ -3,7 +3,7 @@
 - Todos os alfabetos pode ser alterados para ter mais segurança. Utilizando como uma cifra de duas chaves
 - Caso esteja lendo isso e tenha alguma ideia de como importar pastas para um script me ajude com isso XD
 - Em breve esse post tera um pdf explicando cada cifra
-
+_________________________________________________________________________________________________________
 - Cryptxxx/ErickCypher
 	- Cifra baseada na cifra de cezar utilizando uma chave simples para substituir
 	- A partir do binario a chave se decide se ela sera adcionada ou subtraida
