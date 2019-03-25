@@ -37,7 +37,7 @@ ________________________________________________________________________________
 	- Como 90 e um numero maior que o alfabeto convencional de 26 letras, convem usar o resto da divisão de 90 pelo tamanho do alfabeto.
 	- Logo(m+12)-(a-12)-(r+12)-(t+12)-(e-12)-(l+12)-(o-12)
 	- entao ErickCypher(martelo) == amfhqza
-	- Caso o tamanho da palvra e do binario sejam diferentes, deve-se iguala-los repetindo o binario ou, eliminando casas mais a direita.
+- Caso o tamanho da palvra e do binario sejam diferentes, deve-se iguala-los repetindo o binario ou, eliminando casas mais a direita.
 _________________________________________________________________________________________________________
 
 	
