@@ -5,7 +5,7 @@
 - Em breve esse post tera um pdf explicando cada cifra
 
 - Cryptxxx/ErickCypher
-    - Cifra baseada na cifra de cezar utilizando uma chave simples para substituir
+	- Cifra baseada na cifra de cezar utilizando uma chave simples para substituir
     - A partir do binario a chave se decide se ela sera adcionada ou subtraida
     - Exemplo:
             - Criptografar a palavra "martelo" com a chave 90
