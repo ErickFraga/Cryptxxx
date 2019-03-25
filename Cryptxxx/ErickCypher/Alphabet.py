@@ -1,0 +1,1 @@
+Alpha = ' abcdefghijklmnÂopqrstuvwxyz0123â456789!@#$%¨&*(Õ)_+ABCDôEFGHIJKLMNOPQRSTUãVWõXYZ.,<>:~^ç{][}-/?°Ã'

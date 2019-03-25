@@ -1,0 +1,4 @@
+import Alphabet
+
+
+Alphabet.GenerateVigenereTable()
