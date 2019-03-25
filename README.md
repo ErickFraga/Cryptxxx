@@ -1,6 +1,6 @@
 # Cryptxxx
 - Um pragrama com varias cifras de sbstituição
-- Todos os alfabetos pode ser alterados para ter mais segurança. Utilizando como uma cifra de duas chaves
+- Todos os alfabetos podem ser alterados para ter mais segurança. Dando origem a uma cifra de duas chaves
 - Caso esteja lendo isso e tenha alguma ideia de como importar pastas para um script me ajude com isso XD
 - Em breve esse post tera um pdf explicando cada cifra
 _________________________________________________________________________________________________________
