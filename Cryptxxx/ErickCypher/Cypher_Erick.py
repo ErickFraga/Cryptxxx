@@ -5,12 +5,13 @@ def CypherMenu():
     PrintSteps = False
     while True:
         os.system("cls")
-        print(PrintSteps)
         print('-'*10 + ' ==Erick_Cypher== ' + '-'*10, end='\n\n')
         print('\t- 1 : Encriptar')
         print('\t- 2 : Desencriptar')
-        print('\t- 3 : Mostra passos')
-        print('\t- 4 : Não Mostra passos')
+        if PrintSteps:
+            print('\t- 3 : Não Mostrar passos')
+        else:
+            print('\t- 3 : Mostrar passos')
         print('\t- 0 : Sair')
         op = int(input('\n\tO que deseja fazer? '))
         if op > 4 or op < 0:
@@ -19,26 +20,17 @@ def CypherMenu():
 
             if op == 1:
                 CypherMode = False
-                encriptedWord = ErickCypher(word=input('Palavra : '), key=int(input('Chave : ')), CripMode=CypherMode, PrintSteps=PrintSteps)
+                encriptedWord = ErickCypher(word=input('Palavra : '), key=int(input('Chave inteira : ')), CripMode=CypherMode, PrintSteps=PrintSteps)
                 print(encriptedWord, end='\n' + '_'*38 + '\n')
             elif op == 2:
                 CypherMode = True
-                encriptedWord = ErickCypher(word=input('Palavra : '), key=int(input('Chave : ')), CripMode=CypherMode, PrintSteps=PrintSteps)
+                encriptedWord = ErickCypher(word=input('Palavra : '), key=int(input('Chave inteira : ')), CripMode=CypherMode, PrintSteps=PrintSteps)
                 print(encriptedWord, end='\n' + '_'*38 + '\n')
             elif op == 3:
-                PrintSteps = True
-            elif op == 4:
-                PrintSteps = False   
+                PrintSteps = not PrintSteps
             else:
                 break
-            
-            
             os.system("pause")
-
-
-
-
-
 
 def sing(x):
     """
@@ -56,7 +48,7 @@ def sing(x):
     else:
         return 0
 
-def CreateMask(key, key_Alpha, lenWord, CripMode, PrintSteps):
+def CreateMask(key, key_Alpha, lenWord, CripMode, PrintSteps=bool()):
     """
     :Param:
         key:        int - cifra inteira
@@ -69,7 +61,7 @@ def CreateMask(key, key_Alpha, lenWord, CripMode, PrintSteps):
             - para adicionar ou subtrair posicoes no alfabeto
     """
     strMask = str(bin(key)).replace('0b', '')
-    
+
     while len(strMask) < lenWord:
         strMask += strMask
 
@@ -85,10 +77,10 @@ def CreateMask(key, key_Alpha, lenWord, CripMode, PrintSteps):
             real_Mask[idx] = -1 * num
     if PrintSteps == True:
         print(f'Mascara da cifra : \t{real_Mask}')
-    
+
     return real_Mask
 
-def SetKeyLetters(word=str(), PrintSteps=True):
+def SetKeyLetters(word=str(), PrintSteps=bool()):
     """
     :Param:
         word:   str - palavra que sera encripitada
@@ -100,12 +92,12 @@ def SetKeyLetters(word=str(), PrintSteps=True):
     for n in word:
         wordIndex.append(int(Alpha.find(n)))
 
-    if PrintSteps == True:
+    if PrintSteps:
         print(f'chave das letras: \t{wordIndex}')
 
     return wordIndex
 
-def ErickCypher(key, word, CripMode=True, PrintSteps=True):
+def ErickCypher(key, word, CripMode=True, PrintSteps=bool()):
     """
     :Param:
         key:        int - Cifra para somar/subtrair da Palavra

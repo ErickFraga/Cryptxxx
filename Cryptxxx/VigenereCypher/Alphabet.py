@@ -10,12 +10,15 @@ def SetAlphabet(Alpha=str()):
 	File_Alpha.write(Alpha)
 	File_Alpha.close()
 
+def RsetAlphadet():
+	SetAlphabet('abcdefghijklmnopqrstuvwxyz')
+
 def AddAlphabet(Alpha=str()):
 	File_Alpha = open('_Alphabet.txt', "a")
 	File_Alpha.write(Alpha)
 	File_Alpha.close()
 
-def GenerateVigenereTable(ShowTable=False):
+def GenerateVigenereTable(ShowTable):
 	Alpha = GetAlphabet()
 	File = open("_VigenereTable.txt", "w")
 	Alpha = Alpha.replace('\n', '')

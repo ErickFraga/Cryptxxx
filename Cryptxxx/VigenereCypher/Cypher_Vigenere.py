@@ -2,33 +2,55 @@ import Alphabet
 import os
 
 def CypherMenu():
+    ShowTable = bool()
     while True:
         os.system("cls")
-
         print('-'*10 + ' ==Vigenere_Cypher== ' + '-'*10, end='\n\n')
         print('\t- 1 : Encriptar')
         print('\t- 2 : Desencriptar')
-        print('\t- 3 : Mostrar Tabelas')
-        print('\t- 4 : Não Mostrar Tabelas')
+        if ShowTable:
+            print('\t- 3 : Não Mostrar Tabelas')
+        else:
+            print('\t- 3 : Mostrar Tabelas')
+        print('\t- 4 : Novo alfabeto')
+        print('\t- 5 : Adicionar ao alfabeto')
+        print('\t- 6 : Exibir alfabeto')
+        print('\t- 7 : Redefinir Alfabeto')
         print('\t- 0 : Sair')
         op = int(input('\n\tO que deseja fazer? '))
-        if op > 2 or op < 0:
+        if op > 7 or op < 0:
             print('\n\tValor invalido, apenas valores do 1 a 2.')
         else:
 
             if op == 1:
                 CypherMode = True
+                final_word = VigenereCypher(word=input('Palavra : '), keyWord=input('Palavra-Chave : '), CripMode=CypherMode, ShowTable=ShowTable)
+                print(f'Palavra Encriptada : {final_word}', end='\n' + '_'*38 + '\n')
+            
             elif op == 2:
                 CypherMode = False
+                final_word = VigenereCypher(word=input('Palavra : '), keyWord=input('Palavra-Chave : '), CripMode=CypherMode, ShowTable=ShowTable)
+                print(f'Palavra Encriptada : {final_word}', end='\n' + '_'*38 + '\n')
+            
             elif op == 3:
-                ShowTable = True
-            elif op == 4:
-                ShowTable = False
-            else:
+                ShowTable = not ShowTable
+            
+            elif op == 4 or op == 5:
+                print('Alterar o alfabeto pode resultar em incompatibilade na cifra...')
+                op1 = input('Quer continuar? [s/n] : ')
+                
+                if (op1 == 's' or op1 == 'S'):
+                    if op == 4:
+                        Alphabet.SetAlphabet(Alpha=input('\nNovo Alfabeto : '))
+                    elif op ==5:
+                        Alphabet.AddAlphabet(Alpha=input('\nNovo texto Alfabeto : '))
+            elif op == 6:
+                print(f'Alfabeto : {Alphabet.GetAlphabet()}')
+            elif op == 7:
+                Alphabet.RsetAlphadet()
+            else:   
                 break
-            final_word = VigenereCypher(word=input('Palavra : '), keyWord=input('Palavra-Chave : '), CripMode=CypherMode)
-            print(final_word, end='\n' + '_'*38 + '\n')
-            os.system("pause")
+        os.system("pause")
 
 def MatchLegth(word, keyWord):
     """
@@ -81,7 +103,7 @@ def InssertSpaces(spaces, enc_word):
             enc_word = enc_word[:itm] + ' ' + enc_word[itm:]
     return enc_word
 
-def VigenereCypher(word, keyWord, CripMode=True):
+def VigenereCypher(word, keyWord, CripMode=True, ShowTable=bool()):
     """
     word.............:  abacate
     key-word.........:  sol
@@ -90,7 +112,7 @@ def VigenereCypher(word, keyWord, CripMode=True):
 
     """
     Alpha = Alphabet.GetAlphabet() # Carrega o alfabeto
-    Alphabet.GenerateVigenereTable() # Gera a tabela novamente, Para o caso de uma ateração no alfabeto
+    Alphabet.GenerateVigenereTable(ShowTable=ShowTable) # Gera a tabela novamente, Para o caso de uma ateração no alfabeto
     VigTable = Alphabet.LoadVigenereTable() # Carrega a tabela de vigenere
 
     spaces = []     # Lista para armazenar a posição dos espaços caso nao estejam no alfabeto
