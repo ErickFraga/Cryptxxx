@@ -12,7 +12,7 @@
 		- A representação binaria de 90 e 1011010. Que sera usado como uma especie de mascara
             	- Logo re relaciona cada letra da palavra com cada digito binario
 			- m-a-r-t-e-l-o
-	    		- 1-0-1-1-0-1-0
+			- 1-0-1-1-0-1-0
 		- depois se analiza cada letra e cada digito
     		- Caso o digito seja 1 a chave 90 será adicionada a letra em questão
             	- Caso o digito seja 0 a chave 90 será subtraida a letra em questão
