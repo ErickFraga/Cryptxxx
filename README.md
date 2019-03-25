@@ -8,7 +8,7 @@
 - Caso esteja lendo isso e tenha alguma ideia de como importar pastas para um script em python me ajude com isso XD.
 - Em breve esse post tera um pdf explicando cada cifra.
 ________________________________________________________________________________________________________
-- Cryptxxx/CezarCypher
+# Cryptxxx/CezarCypher
 	- A Cifra de Cézar se baseia em substituir as letras de uma palavra.
 	- Essas substituição e feita com base em uma chave.
 	- para encriptar a palavra, deve-se substituir a letra original pela letra equivalente a letra orignal mais a cifra.
@@ -21,7 +21,7 @@ ________________________________________________________________________________
 			- a + 8 = i
 		- Logo CezarCypher(bola) == jwti
 ________________________________________________________________________________________________________
-- Cryptxxx/ErickCypher
+# Cryptxxx/ErickCypher
 	- Cifra baseada na cifra de cezar utilizando uma chave simples para substituir a letra orignal.
 	- A partir do binario da chave, e decidido se ela sera adcionada ou subtraida a posição da letra original.
 	- Exemplo:
