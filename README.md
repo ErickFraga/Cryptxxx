@@ -18,5 +18,5 @@
             - Caso o digito seja 0 a chave 90 será subtraida a letra em questão
             - Logo temos (m+90)-(a-90)-(r+90)-(t+90)-(e-90)-(l+90)-(o-90)
             - Como 90 e um numero maior que o alfabeto convencional de 26 letras, convem usar o resto da divisão de 90 pelo tamanho do alfabeto
-  - Logo(m+12)-(a-12)-(r+12)-(t+12)-(e-12)-(l+12)-(o-12)
-  - entao ErickCypher(martelo) == amfhqza
+            - Logo(m+12)-(a-12)-(r+12)-(t+12)-(e-12)-(l+12)-(o-12)
+            - entao ErickCypher(martelo) == amfhqza
