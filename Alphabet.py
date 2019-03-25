@@ -1,1 +1,0 @@
-Alpha = ' abcdefghijklmnopqrstuvwxyz0123456789!@#$%¨&*()_+ABCDEFGHIJKLMNOPQRSTUVWXYZ.,<>:~^ç{][}-/?°'
